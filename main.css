@@ -1,0 +1,19 @@
+.body{
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+.clock{
+    background: #202020;
+    width: 800px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.clock-time{
+    font-family: 'Orbitron', sans-serif;
+    font-size: 125px;
+    color: aquamarine;
+}
