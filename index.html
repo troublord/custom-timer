@@ -1,24 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./main.css">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@800&display=swap');
     </style>
-        
+
     <title>Custom Timer</title>
 </head>
+
 <body class="body" style="background-color: rgb(51, 51, 51);">
-    <div class="clock">
-        <span class = "clock-time"></span>
-        <span class = "alarm-time-hour" hidden>17</span>
-        <span class = "alarm-time-minute" hidden>11</span>
+    <div class="relative">
+        <div class="clock">
+            <span class="clock-time"></span>
+        </div>
+
+        <div class="flex justify-center items-center space-x-2  mt-10 ">
+            <input id = "alarm-time-hour" class="border border-gray-300 px-2 py-1 rounded-lg" type="text" placeholder="HH" value = "08">
+            <span>:</span>
+            <input id = "alarm-time-minute" class="border border-gray-300 px-2 py-1 rounded-lg" type="text" placeholder="MM" value = "00">
+        </div>
+        <div class="flex justify-center  mt-4">
+            <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg" onclick="startCount()">開始</button>
+        </div>
+
     </div>
 </body>
 <footer>
     <script src="./main.js"></script>
 </footer>
+
 </html>
