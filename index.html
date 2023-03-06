@@ -24,7 +24,7 @@
             <div class="flex items-center justify-between mb-2">
                 <span class="text-gray-800 font-medium text-white">Status:</span>
                 <span id = "isWorking" class=" text-white font-medium">
-                    
+                    未開始
                 </span>
             </div>
             <!-- next alarm will ring at -->
@@ -43,15 +43,18 @@
             </div>
         </div>
         <div class="flex justify-center items-center space-x-2  mt-10 ">
-            <input id="alarm-time-hour" class="border border-gray-300 px-2 py-1 rounded-lg" type="text" placeholder="HH"
-                value="08">
+            <input id="alarm-time-hour" class="border border-gray-300 px-2 py-1 rounded-lg" type="text" placeholder="HH" onchange="validateHour(this);">
             <span>:</span>
-            <input id="alarm-time-minute" class="border border-gray-300 px-2 py-1 rounded-lg" type="text"
-                placeholder="MM" value="00">
+            <input id="alarm-time-minute" class="border border-gray-300 px-2 py-1 rounded-lg" type="text" onchange="validateMinute(this);"
+                placeholder="MM" >
         </div>
         <div class="flex justify-center  mt-4">
             <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg"
-                onclick="startCount()">開始</button>
+                onclick="startBell()">開始</button>
+        </div>
+        <div class="flex justify-center  mt-4">
+            <button class="bg-red-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg"
+                onclick="stopBell()">停止</button>
         </div>
         <div class="flex justify-center text-center mt-4">
             <button
@@ -93,8 +96,7 @@
         </p>
         <div class="grid grid-cols-2 gap-4">
            <!-- button container -->
-           <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg"
-                onclick="resetStatus()">重設</button>
+           
         </div>
     </div>
     <footer>
